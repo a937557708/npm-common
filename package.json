@@ -1,52 +1,91 @@
 {
-    "name": "public-element-prompt-component",
-    "description": "element-ui public prompt component",
-    "version": "1.0.0",
-    "author": "xueyecheng <cheng.xueye@ycgame.com>",
-    "license": "MIT",
-    "private": false,
-    "main": "dist/public-component.js",
-    "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-    },
-    "directories": {
-        "dist": "dist"
-    },
-    "dependencies": {
-        "vue": "^2.5.11"
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ],
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-stage-3": "^6.24.1",
-        "cross-env": "^5.0.5",
-        "css-loader": "^0.28.7",
-        "element-ui": "^2.5.2",
-        "file-loader": "^1.1.4",
-        "node-sass": "^4.5.3",
-        "sass-loader": "^6.0.6",
-        "vue-loader": "^13.0.5",
-        "vue-template-compiler": "^2.4.4",
-        "webpack": "^3.6.0",
-        "webpack-dev-server": "^2.9.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/xueyecheng/public-element-prompt-component.git"
-    },
-    "bugs": {
-        "url": "https://github.com/xueyecheng/public-element-prompt-component/issues"
-    },
-    "homepage": "https://github.com/xueyecheng/public-element-prompt-component",
-    "keywords": [
-        "element",
-        "prompt"
-    ]
+  "name": "vue-admin-template",
+  "version": "4.2.1",
+  "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
+  "author": "Pan <panfree23@gmail.com>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build:prod": "vue-cli-service build",
+    "build:stage": "vue-cli-service build --mode staging",
+    "preview": "node build/index.js --preview",
+    "lint": "eslint --ext .js,.vue src",
+    "test:unit": "jest --clearCache && vue-cli-service test:unit",
+    "test:ci": "npm run lint && npm run test:unit",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^17.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^17.0.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^17.0.0",
+    "@ckeditor/ckeditor5-editor-classic": "^17.0.0",
+    "@ckeditor/ckeditor5-essentials": "^17.0.0",
+    "@ckeditor/ckeditor5-link": "^17.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^17.0.0",
+    "@ckeditor/ckeditor5-theme-lark": "^17.0.0",
+    "@ckeditor/ckeditor5-vue": "^1.0.1",
+    "@notadd/neditor": "^2.1.20",
+    "@riophae/vue-treeselect": "^0.4.0",
+    "@umijs/hooks": "^1.6.0",
+    "axios": "0.18.1",
+    "ckeditor4-vue": "^0.2.0",
+    "codemirror": "^5.52.0",
+    "element-ui": "^2.13.1",
+    "highlight.js": "^9.18.1",
+    "jodit": "^3.6.2",
+    "js-cookie": "2.2.0",
+    "normalize.css": "7.0.0",
+    "nprogress": "0.2.0",
+    "path-to-regexp": "2.4.0",
+    "postcss-import": "^14.0.1",
+    "postcss-url": "^10.1.3",
+    "qs": "^6.5.2",
+    "simple-uploader.js": "^0.2.2",
+    "tiptap": "^1.27.1",
+    "vue": "2.6.10",
+    "vue-contextmenujs": "^1.3.8",
+    "vue-localstorage": "^0.6.2",
+    "vue-neditor-wrap": "^1.0.4",
+    "vue-router": "3.0.6",
+    "vue2-editor": "^2.10.2",
+    "vuex": "3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@babel/register": "7.0.0",
+    "@vue/cli-plugin-babel": "3.6.0",
+    "@vue/cli-plugin-eslint": "^3.9.1",
+    "@vue/cli-plugin-unit-jest": "3.6.3",
+    "@vue/cli-service": "3.6.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "autoprefixer": "^9.5.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "bettersearch": "^1.0.1",
+    "chalk": "2.4.2",
+    "connect": "3.6.6",
+    "eslint": "5.15.3",
+    "eslint-plugin-vue": "5.2.2",
+    "html-webpack-plugin": "3.2.0",
+    "mockjs": "1.0.1-beta3",
+    "node-sass": "^4.9.0",
+    "runjs": "^4.3.2",
+    "sass-loader": "^7.1.0",
+    "script-ext-html-webpack-plugin": "2.1.3",
+    "script-loader": "0.7.2",
+    "serve-static": "^1.13.2",
+    "svg-sprite-loader": "4.1.3",
+    "svgo": "1.2.2",
+    "vue-template-compiler": "2.6.10"
+  },
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
