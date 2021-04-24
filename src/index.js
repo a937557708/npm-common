@@ -20,7 +20,9 @@ const install = function(Vue, opts = {}) {
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 } 
-
-  export  {
-    install,Step 
-  }
+export  {
+  install,Step 
+}
+export default {
+  install,Step 
+}
